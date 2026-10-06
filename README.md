@@ -1,6 +1,6 @@
 # Name - Electrical Engineering Portfolio
 
-Personal portfolio for an EE student at College . Analog circuits, embedded systems, DSP — with bench-verified projects and shipped offline-first apps. Senior Design capstone: **SafeSense** (energy-aware cooperative ISAC mesh).
+Personal portfolio for an EE student at College . Analog circuits, embedded systems, DSP projects and shipped offline-first apps. Senior Design capstone: **SafeSense** (energy-aware cooperative ISAC mesh).
 
 Built with **React 19 + Vite + Tailwind CSS 4**. The production build inlines everything into a single `dist/index.html` (via `vite-plugin-singlefile`) plus two images — perfect for static hosting.
 
@@ -58,7 +58,7 @@ npm run preview  # preview the production build locally
 ## 📁 Project structure
 
 ```
-public/images/     portrait + bench photos (served at /images/)
+public/images/     portrait (served at /images/)
 src/
   data.ts                  all portfolio content (edit this to update the site)
   components/

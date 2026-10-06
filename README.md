@@ -1,4 +1,4 @@
-# Name - Electrical Engineering Portfolio
+# Electrical Engineering Portfolio
 
 Personal portfolio for an EE student at College. Analog circuits, embedded systems, DSP projects and shipped apps. Senior Design capstone.
 

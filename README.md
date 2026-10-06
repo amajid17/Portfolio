@@ -1,6 +1,6 @@
 # Name - Electrical Engineering Portfolio
 
-Personal portfolio for an EE student at College . Analog circuits, embedded systems, DSP projects and shipped apps. Senior Design capstone.
+Personal portfolio for an EE student at College. Analog circuits, embedded systems, DSP projects and shipped apps. Senior Design capstone.
 
 Built with **React 19 + Vite + Tailwind CSS 4**. The production build inlines everything into a single `dist/index.html` (via `vite-plugin-singlefile`) plus two images — perfect for static hosting.
 

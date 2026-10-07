@@ -1,16 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight, MapPin, GraduationCap, Mail, Activity, Cpu, Zap } from "lucide-react";
+import { ArrowDown, ArrowUpRight, MapPin, GraduationCap, Mail, Activity, Cpu, Zap, Linkedin } from "lucide-react";
 import { PROFILE } from "../data";
 
 function GithubIcon({ size = 15 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
-  );
-}
-function LinkedinIcon({ size = 15 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v2..." /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
   );
 }
 
@@ -182,7 +177,7 @@ export function Hero() {
             <span className="inline-flex items-center gap-1.5"><MapPin size={14} className="text-[#3eff7b]" /> {PROFILE.location}</span>
             <span className="inline-flex items-center gap-3 ml-1">
               <a href={PROFILE.github} target="_blank" rel="noopener" aria-label="GitHub" className="w-8 h-8 grid place-items-center rounded-md border border-white/10 text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors"><GithubIcon size={15} /></a>
-              <a href={PROFILE.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn" className="w-8 h-8 grid place-items-center rounded-md border border-white/10 text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors"><LinkedinIcon size={15} /></a>
+              <a href={PROFILE.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn" className="w-8 h-8 grid place-items-center rounded-md border border-white/10 text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors"><Linkedin size={15} /></a>
               <a href={`mailto:${PROFILE.email}`} aria-label="Email" className="w-8 h-8 grid place-items-center rounded-md border border-white/10 text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors"><Mail size={15} /></a>
             </span>
           </motion.div>
@@ -193,10 +188,10 @@ export function Hero() {
           <div className="relative rounded-[16px] overflow-hidden border border-[rgba(62,255,123,0.18)] bg-[#0b1210] card-ring">
             <div className="grid grid-cols-[1fr_128px]">
               <div className="p-5 md:p-6">
-                <p className="font-mono2 text-[10px] tracking-[0.18em] uppercase text-[#6b7f75] mb-1">EE425 · Lab 7 · Comb FIR N=13</p>
+                <p className="font-mono2 text-[10px] tracking-[0.18em] uppercase text-[#6b7f75] mb-1">FPGA Implementation · Comb FIR Filter</p>
                 <p className="font-display font-semibold text-[17px] tracking-tight text-white leading-tight">Hardware matches theory,<br />null-for-null.</p>
                 <div className="mt-4 flex gap-2">
-                  <span className="font-mono2 text-[10px] px-2 py-1 rounded border border-[rgba(62,255,123,0.3)] text-[#3eff7b] bg-[rgba(62,255,123,0.08)]">13 NULLS MAPPED</span>
+                  <span className="font-mono2 text-[10px] px-2 py-1 rounded border border-[rgba(62,255,123,0.3)] text-[#3eff7b] bg-[rgba(62,255,123,0.08)]">ALL NULLS MAPPED</span>
                   <span className="font-mono2 text-[10px] px-2 py-1 rounded border border-white/10 text-[#a8bab0]">freqz ✓</span>
                 </div>
               </div>
@@ -229,7 +224,7 @@ export function Hero() {
             {[
               ["7", "bench-verified builds"],
               ["3", "apps shipped & live"],
-              ["13", "filter nulls proven"],
+              ["HW=f(x)", "theory confirmed on bench"],
             ].map(([v, l]) => (
               <div key={l} className="bg-[#0b1210] px-4 py-4 text-center">
                 <p className="font-display font-bold text-[22px] text-white leading-none">{v}</p>

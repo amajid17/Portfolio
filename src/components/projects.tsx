@@ -22,7 +22,8 @@ function CombExplorer() {
     const pts: string[] = [];
     for (let i = 0; i <= 200; i++) {
       const f = i / 200;
-      const mag = Math.abs(Math.sin(Math.PI * N * f));
+      // H(z) = 1 + z^-N → |H(e^jω)| = 2|cos(πNf)| — normalised to 0..1
+      const mag = Math.abs(Math.cos(Math.PI * N * f));
       const x = (i / 200) * W;
       const y = H - 8 - mag * (H - 20);
       pts.push(`${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`);
@@ -37,7 +38,7 @@ function CombExplorer() {
       <div className="flex flex-col md:flex-row">
         <div className="flex-1 p-5 md:p-6">
           <div className="flex items-center justify-between mb-3">
-            <p className="font-mono2 text-[10px] tracking-[0.16em] uppercase text-[#6b7f75]">Interactive · |H(e<sup>jω</sup>)| = |1 − z<sup>−N</sup>|</p>
+            <p className="font-mono2 text-[10px] tracking-[0.16em] uppercase text-[#6b7f75]">Interactive · |H(e<sup>jω</sup>)| = |1 + z<sup>−N</sup>|</p>
             <p className="font-mono2 text-[11px] text-[#3eff7b]">N = <span className="text-white font-semibold text-[14px]">{N}</span></p>
           </div>
           <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-[110px]" preserveAspectRatio="none" aria-hidden="true">
@@ -46,10 +47,17 @@ function CombExplorer() {
             <line x1={W / 2} y1="0" x2={W / 2} y2={H} stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
             <text x={W / 2 + 6} y="14" fill="#6b7f75" fontSize="10" fontFamily="JetBrains Mono">Nyquist</text>
             <path d={path} fill="none" stroke="#3eff7b" strokeWidth="1.8" style={{ filter: "drop-shadow(0 0 6px rgba(62,255,123,.6))" }} />
-            {/* null dots */}
-            {Array.from({ length: N + 1 }, (_, k) => {
-              const x = (k / N) * W;
-              return <circle key={k} cx={x} cy={H - 8} r="3" fill={k === N / 2 && !nyquistNull ? "#ff5d5d" : "#0b1210"} stroke={k === N / 2 && !nyquistNull ? "#ff5d5d" : "#3eff7b"} strokeWidth="1.5" />;
+            {/* null dots — cos filter nulls at (2k+1)/(2N) */}
+            {Array.from({ length: N }, (_, k) => {
+              const fNull = (2 * k + 1) / (2 * N);
+              const x = fNull * W;
+              const isAtNyquist = Math.abs(fNull - 0.5) < 0.001;
+              return (
+                <circle key={k} cx={x} cy={H - 8} r="3"
+                  fill={isAtNyquist && nyquistNull ? "#3eff7b" : "#0b1210"}
+                  stroke={isAtNyquist && !nyquistNull ? "#ff5d5d" : "#3eff7b"}
+                  strokeWidth="1.5" />
+              );
             })}
           </svg>
           <div className="mt-4">

@@ -58,6 +58,7 @@ npm run preview  # preview the production build locally
 ## 📁 Project structure
 
 ```
+.github/workflows/deploy.yml  auto-deploy to GitHub Pages
 public/images/     portrait (served at /images/)
 src/
   data.ts                  all portfolio content (edit this to update the site)
@@ -69,7 +70,6 @@ src/
     capstone-contact.tsx   SafeSense section + contact form
   App.tsx                  page composition
 index.html                 SEO meta, fonts, favicon
-.github/workflows/deploy.yml  auto-deploy to GitHub Pages
 ```
 
 ## ✏️ To customize

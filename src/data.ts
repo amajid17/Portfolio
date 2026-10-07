@@ -1,6 +1,6 @@
 export const PROFILE = {
   name: "A. Majid",
-  first: "Abdullah",
+  first: "Abdul",
   last: "Majid",
   role: "Electrical Engineering · CCNY ’27",
   tagline: "Analog circuits, embedded systems & DSP — from first schematic to working bench prototype.",
@@ -126,12 +126,12 @@ export const LABS: Lab[] = [
     id: "comb",
     ch: "CH7",
     area: "FPGA Implementation · Featured",
-    title: "Comb FIR Filter on FPGA — N=13",
+    title: "Comb FIR Filter on FPGA",
     summary:
       "Reverse-engineered an undisclosed comb FIR by reading the ISE schematic cold — counted cascaded registers to extract N before powering anything. Swept to Nyquist, mapped every null, proved N must be odd for a Nyquist null, modded the design and matched MATLAB freqz null-for-null.",
     tags: ["FPGA", "FIR Comb", "ISE", "MATLAB freqz", "ADC/DAC"],
     specs: [
-      { k: "N extracted", v: "13 · schematic count", pass: true },
+      { k: "Delay param", v: "Extracted from schematic", pass: true },
       { k: "Nulls", v: "All mapped to Nyquist", pass: true },
       { k: "Match", v: "HW = freqz theory", pass: true },
     ],

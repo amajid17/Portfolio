@@ -220,7 +220,7 @@ export const PERSONAL = [
       "Shift + paycheck tracker that lives on your home screen. One HTML file, no framework, no build — exports a multi-sheet XLS entirely in-browser.",
     links: [
       { l: "GitHub", h: "https://github.com/amajid17/work-tracker.git" },
-      { l: "Live Demo", h: "https://scheduletracker19.netlify.app/" },
+      { l: "Live Demo", h: "https://schedule-tracker1.netlify.app//" },
     ],
     stack: ["Vanilla JS", "Service Worker", "localStorage", "Blob API"],
     highlights: [

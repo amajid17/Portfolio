@@ -59,7 +59,7 @@ npm run preview  # preview the production build locally
 
 ```
 .github/workflows/deploy.yml  auto-deploy to GitHub Pages
-public/images/     portrait (served at /images/)
+public/images/     portrait/projects capture
 src/
   data.ts                  all portfolio content (edit this to update the site)
   components/

@@ -240,7 +240,7 @@ export const PERSONAL = [
     name: "Money Tracker",
     plats: ["PWA", "Multi-wallet", "Zero-dep"],
     pitch:
-      "Multi-wallet finance app — categorized transactions, recurring automation, canvas donut breakdown. No backend, no build, installs on iOS + Android.",
+      "Multi-wallet finance app with categorized transactions, recurring automation, canvas donut breakdown. No backend, no build, installs on iOS + Android.",
     links: [
       { l: "GitHub", h: "https://github.com/amajid17/money-tracker.git" },
       { l: "Live Demo", h: "https://money-tracker19.netlify.app/" },

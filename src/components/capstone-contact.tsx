@@ -200,7 +200,7 @@ export function Contact() {
             <div className="mt-5 flex gap-2.5">
               <a href={PROFILE.github} target="_blank" rel="noopener" className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 py-3 font-mono2 text-[11px] tracking-[0.08em] uppercase text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors">GitHub <ArrowUpRight size={13} /></a>
               <a href={PROFILE.linkedin} target="_blank" rel="noopener" className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 py-3 font-mono2 text-[11px] tracking-[0.08em] uppercase text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors">LinkedIn <ArrowUpRight size={13} /></a>
-              <a href="https://github.com/amajid17" target="_blank" rel="noopener" className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 py-3 font-mono2 text-[11px] tracking-[0.08em] uppercase text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors">Expo <ArrowUpRight size={13} /></a>
+              <a href="https://expo.dev/@amajid17/quran-reader" target="_blank" rel="noopener" className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-[10px] border border-white/10 py-3 font-mono2 text-[11px] tracking-[0.08em] uppercase text-[#a8bab0] hover:text-[#3eff7b] hover:border-[rgba(62,255,123,0.4)] transition-colors">Expo <ArrowUpRight size={13} /></a>
             </div>
           </Reveal>
 
@@ -231,15 +231,7 @@ export function Contact() {
           </Reveal>
         </div>
 
-        {/* improvement notes — professional review strip */}
-        <Reveal className="mt-6 rounded-[14px] border border-white/[0.08] bg-white/[0.02] p-6 md:p-7">
-          <p className="font-mono2 text-[10px] tracking-[0.16em] uppercase text-[#3eff7b] mb-3">★ What changed in this professional pass — and why</p>
-          <div className="grid md:grid-cols-3 gap-4 text-[12.5px] leading-relaxed text-[#a8bab0]">
-            <p><span className="text-white font-medium">1. Proof over claims.</span> Every lab now shows spec → sim → measurement with pass badges and a reports-on-request CTA. Hiring managers skim for numbers.</p>
-            <p><span className="text-white font-medium">2. Hierarchy + restraint.</span> One accent, generous whitespace, sticky scrollspy nav with progress, and real section numbers — no neon-everywhere fatigue.</p>
-            <p><span className="text-white font-medium">3. Human + hirable.</span> Live scope canvas, interactive N-slider proving the comb fix, portrait + bench photo, availability badge, copy-email + mailto form. Nothing 404s.</p>
-          </div>
-        </Reveal>
+
       </div>
     </section>
   );

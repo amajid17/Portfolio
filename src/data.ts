@@ -190,28 +190,35 @@ export const SKILLS = [
 
 export const PERSONAL = [
   {
-    type: "Mobile · Offline-first",
-    name: "Quran Reader",
-    plats: ["iOS", "Android", "Expo"],
-    pitch:
-      "Distraction-free Arabic reader — proper Tajweed coloring, RTL layout, all 114 surahs bundled at install. No account, no network, no clutter.",
-    links: [
-      { l: "GitHub", h: "https://github.com/amajid17/Quran-reader" },
-      { l: "Expo", h: "https://expo.dev/@amajid17/quran-reader" },
-    ],
-    stack: ["React Native 0.81", "Expo SDK 54", "TypeScript", "React Nav v7", "quran-json"],
-    highlights: [
-      "Tajweed rendered inline via rn-tajweed-verse — per-rule colors, zero overlays",
-      "3 bundled Arabic typefaces (Scheherazade New, Noto Naskh, Literata) via I18nManager RTL",
-    ],
-    arch: [
-      "Boot checksum validates all 114 surahs — loud in dev, silent in prod",
-      "Error boundary + AsyncStorage persistence keeps bookmarks safe through crashes",
-    ],
-    metric: "114",
-    metricLabel: "surahs offline day-one",
-    accent: "#3eff7b",
-  },
+  type: "Mobile · Offline-first",
+  name: "Quran Reader",
+  plats: ["Android", "iOS", "Expo"],
+  pitch:
+    "A distraction-free Quran reader built for offline use — Arabic-first RTL layout, inline Tajweed coloring, all 114 surahs bundled in the app, and no account or network required.",
+  links: [
+    { l: "GitHub", h: "https://github.com/amajid17/Quran-reader" },
+  ],
+  stack: [
+    "React Native",
+    "Expo SDK 57",
+    "TypeScript",
+    "React Navigation",
+    "quran-json",
+  ],
+  highlights: [
+    "Inline Tajweed coloring with per-rule colors",
+    "RTL-first Arabic reading experience with bundled fonts",
+    "All 114 surahs available locally for offline reading",
+  ],
+  arch: [
+    "Bundled Quran dataset validated at startup",
+    "Bookmarks and reading state persisted locally",
+    "Expo/EAS preview build for Android and iOS",
+  ],
+  metric: "114",
+  metricLabel: "surahs offline",
+  accent: "#3eff7b",
+},
   {
     type: "PWA · Installable",
     name: "Work Tracker",
